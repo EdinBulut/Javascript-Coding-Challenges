@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="js.jpg" />
+  <title>Javascript Coding Challenges</title>
+</head>
+
+<body>
+  <div class="container pb-5">
+    <h1 class="text-center pt-5">Javascript Coding Challenges</h1>
+    <h3 class="text-center pb-5 text-secondary">Edin Bulut</h3>
+    <div class="accordion mb-5" id="codingChallenges">
+
+
+      <!-- ///////////////////////////1/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-1"
+            aria-expanded="true" aria-controls="text-1" onclick=buttonTxt(event)>
+            1. Facebook likes
+          </button>
+        </h2>
+        <div id="text-1" class="accordion-collapse collapse" aria-labelledby="title-1"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or
+            other items. <br>
+            We want to create the text that should be displayed next to such an item.<br>
+            Implement a function likes : [String] -> String, which must take in input array, containing the names of
+            people who like an item. It must return the display text as shown in the examples:<br>
+
+            <code class="text-info">likes [] -- must be "no one likes this"<br>
+              likes ["Peter"] -- must be "Peter likes this"<br>
+              likes ["Jacob", "Alex"] -- must be "Jacob and Alex like this"<br>
+              likes ["Max", "John", "Mark"] -- must be "Max, John and Mark like this"<br>
+              likes ["Alex", "Jacob", "Mark", "Max"] -- must be "Alex, Jacob and 2 others like this"
+            </code><br>
+            <div class="accordion mt-5 d-flex flex-column" id="solution-1">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-1" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-1" aria-expanded="true" aria-controls="s-text-1"
+                onclick='changeBtnText("button-1")'>
+                Show Solution
+              </button>
+              <div id="s-text-1" class="accordion-collapse collapse solution" aria-labelledby="button-1"
+                data-bs-parent="#solution-1">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    names1 = ['Jacob', 'Alex', 'John', 'Bob'] <br>
+                    names2 = ['Jacob', 'Alex', 'John'] <br>
+                    names3 = ['Jacob', 'Alex']<br>
+                    names4 = ['Jacob']<br>
+                    names5 = []<br><br>
+                    function likes(names) {<br>
+                    let text = '';<br>
+                    switch (names.length) {<br>
+                    case 0:<br>
+                    text = "no one likes this";<br>
+                    break<br>
+                    case 1:<br>
+                    text = names[0] + " likes this";<br>
+                    break<br>
+                    case 2:<br>
+                    text = names[0] + " and " + names[1] + " like this";<br>
+                    break<br>
+                    case 3:<br>
+                    text = names[0] + ", " + names[1] + " and " + names[2] + " like this";<br>
+                    console.log(text);<br>
+                    break<br>
+                    default:<br>
+                    text = names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";<br>
+                    break<br>
+                    }<br>
+                    console.log(text);<br>
+                    return text;<br>
+                    }
+                    }}<br><br>
+                    likes(names1);<br>
+                    likes(names2);<br>
+                    likes(names3);<br>
+                    likes(names4);<br>
+                    likes(names5);<br>
+                  </code>
+                  <hr>
+                  <code class="text-secondary">
+                    names1 = ['Jacob', 'Alex', 'John', 'Bob'] <br>
+                    names2 = ['Jacob', 'Alex', 'John'] <br>
+                    names3 = ['Jacob', 'Alex']<br>
+                    names4 = ['Jacob']<br>
+                    names5 = []<br><br>
+                    function likes(names) {<br>
+                    if (names.length > 3) {<br>
+                    sentence = names.splice(0, 2).concat(`and ${names.length} others`).join(', ').split(' ')<br>
+                    sentence[1] = sentence[1].replace(/,/ig,'')<br>
+                    sentence = sentence.concat('like this').join(' ')<br>
+                    <br>
+                    } else if (names.length === 3) {<br>
+                    sentence = names.join(', ').split(' ').reverse()<br>
+                    sentence[1] = sentence[1].replace(/,/ig,' and')<br>
+                    sentence = sentence.reverse().concat('like this').join(' ')<br>
+                    <br>
+                    } else if (names.length === 2) {<br>
+                    sentence = names.join(' and ').split(' ').concat('like this').join(' ')<br>
+                    } else if (names.length === 1){<br>
+                    sentence = `${names[0]} likes this`<br>
+                    } else {<br>
+                    sentence = 'no one likes this'<br>
+                    }<br>
+                    console.log(sentence);<br>
+                    return sentence; <br>
+                    }<br>
+                    <br>
+                    likes(names1)<br>
+                    likes(names2)<br>
+                    likes(names3)<br>
+                    likes(names4)<br>
+                    likes(names5)<br>
+                  </code>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////2/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-2"
+            aria-expanded="true" aria-controls="text-2" onclick=buttonTxt(event)>
+            2. Find Uniq Number
+          </button>
+        </h2>
+        <div id="text-2" class="accordion-collapse collapse" aria-labelledby="title-2"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            There is an array with some numbers. <br>
+            All numbers are equal except for one. Try to find it! <br>
+            <code class="text-info">
+              findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2 <br>
+              findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+            </code> <br>
+            It’s guaranteed that array contains at least 3 numbers. <br>
+            The tests contain some very huge arrays, so think about performance. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-2">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-2" aria-expanded="true" aria-controls="s-text-2"
+                onclick='changeBtnText("button-2")'>
+                Show Solution
+              </button>
+              <div id="s-text-2" class="accordion-collapse collapse solution" aria-labelledby="button-2"
+                data-bs-parent="#solution-2">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    array1 = [ 1, 1, 1, 2, 1, 1 ] <br>
+                    array2 = [ 0, 0, 0.55, 0, 0 ] <br> <br>
+
+                    function findUniq(arr) { <br>
+
+                    same = 0 <br>
+                    diff = 0 <br>
+                    first = arr[0] <br>
+
+                    for (let i = 0; i < arr.length; i++) { first===arr[i] ? same++ : diff++ } if (diff===1) { <br>
+                      uniq=arr.filter(el=> el !== first)[0] <br>
+                      } else { <br>
+                      uniq = arr.filter(el => el === first)[0] <br>
+                      } <br> <br>
+
+                      console.log(arr); <br>
+                      console.log(`There are ${same} same numbers`); <br>
+                      console.log(`Uniq number is ${uniq}.`); <br>
+                      return uniq <br>
+                      } <br> <br>
+
+                      findUniq(array1) <br>
+                      findUniq(array2) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////3/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-3"
+            aria-expanded="true" aria-controls="text-3" onclick=buttonTxt(event)>
+            3. Find Odd or Even
+          </button>
+        </h2>
+        <div id="text-3" class="accordion-collapse collapse" aria-labelledby="title-3"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Bob is preparing to pass IQ test. <br>
+            The most frequent task in this test is to find out which one of the given
+            numbers differs from the others. <br>
+            Bob observed that one number usually differs from the others in evenness. <br>
+            Help Bob — to check his answers, he needs a program that among the given numbers finds one that is different
+            in evenness, and return a position of this number. <br> <br>
+            ! Keep in mind that your task is to help Bob solve a real IQ test, which means indexes of the elements start
+            from 1 (not 0) <br>
+
+            ##Examples : <br>
+
+            <code class="text-info">
+              iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even <br>
+              iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
+            </code> <br>
+            It’s guaranteed that array contains at least 3 numbers. <br>
+            The tests contain some very huge arrays, so think about performance. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-3">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-3" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-3" aria-expanded="true" aria-controls="s-text-3"
+                onclick='changeBtnText("button-3")'>
+                Show Solution
+              </button>
+              <div id="s-text-3" class="accordion-collapse collapse solution" aria-labelledby="button-3"
+                data-bs-parent="#solution-3">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    numbers1 = '2 4 7 8 10' <br>
+                    numbers2 = '3 5 7 8 13 19' <br>
+                    function iqTest(numbers) { <br>
+                    odd = 0 <br>
+                    even = 0 <br>
+                    numbers = numbers.split(' ').map(el => parseInt(el, 10)) <br>
+                    numbers.forEach(n => n % 2 === 0 ? even++ : odd++); <br>
+                    even === 1 ? different = numbers.filter(n => n % 2 === 0)[0] : different = numbers.filter(n => n % 2
+                    !== 0)[0] <br>
+                    position = numbers.indexOf(different) + 1 <br>
+                    console.log(`Different number is on position ${position}. It is number ${different}.`); <br>
+                    return position <br>
+                    } <br> <br>
+
+                    iqTest(numbers1) <br>
+                    iqTest(numbers2) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////4/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-4"
+            aria-expanded="true" aria-controls="text-4" onclick=buttonTxt(event)>
+            4. Array Edition
+          </button>
+        </h2>
+        <div id="text-4" class="accordion-collapse collapse" aria-labelledby="title-4"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Your goal in this kata is to implement a difference function, which subtracts one list from another and
+            returns the result. <br>
+            It should remove all values from list a, which are present in list b. <br>
+            <code class="text-info">
+              arrayDiff([1,2],[1]) == [2]
+            </code> <br><br>
+            If a value is present in b, all of its occurrences must be removed from the other: <br>
+            <code class="text-info">
+              arrayDiff([1,2,2,2,3],[2]) == [1,3] <br>
+            </code>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-4">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-4" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-4" aria-expanded="true" aria-controls="s-text-4"
+                onclick='changeBtnText("button-4")'>
+                Show Solution
+              </button>
+              <div id="s-text-4" class="accordion-collapse collapse solution" aria-labelledby="button-4"
+                data-bs-parent="#solution-4">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    arr1 = [3, 4, 5, 6, 7, 8, 9] <br>
+                    arr2 = [3, 6, 9] <br> <br>
+
+
+                    function arrayDiff(a, b) { <br>
+                    let c = []; <br>
+
+                    a.forEach(n => { <br>
+                    if (!b.includes(n)) { <br>
+                    c.push(n) <br>
+                    } <br>
+                    }); <br>
+
+                    console.log(c); <br>
+                    return c <br>
+                    } <br><br>
+
+                    arrayDiff(arr1, arr2)
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////5/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-5"
+            aria-expanded="true" aria-controls="text-5" onclick=buttonTxt(event)>
+            5. Word Value
+          </button>
+        </h2>
+        <div id="text-5" class="accordion-collapse collapse" aria-labelledby="title-5"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Given a string "abc" and assuming that each letter in the string has a value equal to its position in the
+            alphabet, <br>
+            our string will have a value of 1 + 2 + 3 = 6. <br>
+            This means that: <br>
+            <code class="text-info">a = 1, b = 2, c = 3 ....z = 26</code>. <br>
+
+            You will be given a list of strings and your task will be to return the values of the strings as explained
+            above multiplied by the position of that string in the list. <br>
+            For our purpose, position begins with 1. <br>
+            <code class="text-info">nameValue ["abc","abc abc"] should return [6,24] because of [ 6 * 1, 12 * 2
+              ]</code>.
+            <br>
+            Note how spaces are ignored. <br>
+
+            "abc" has a value of 6, while "abc abc" has a value of 12. <br>
+            Now, the value at position 1 is multiplied by 1 <br>
+            while the value at position 2 is multiplied by 2. <br>
+
+            Input will only contain lowercase characters and spaces. <br>
+
+
+
+            <div class="accordion  d-flex flex-column" id="solution-5">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-5" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-5" aria-expanded="true" aria-controls="s-text-5"
+                onclick='changeBtnText("button-5")'>
+                Show Solution
+              </button>
+              <div id="s-text-5" class="accordion-collapse collapse solution" aria-labelledby="button-5"
+                data-bs-parent="#solution-5">
+                <div class="mt-5 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    let words1 = ['abc abc', 'abc', 'a'] <br>
+                    function wordValue(a) { <br>
+                    sum = 0 <br>
+                    arrayOfSum =[] <br>
+                    for (let i = 0; i < a.length; i++) { a[i]=a[i].split('').filter(l=> l !== ' ') <br>
+                      a[i].forEach(l => { <br>
+                      sum += l.toLowerCase().charCodeAt(0) - 96 <br>
+                      }); <br>
+
+                      arrayOfSum.push(sum*(i+1)) <br>
+                      sum = 0 <br>
+                      } <br>
+                      console.log(arrayOfSum); <br>
+                      return arrayOfSum; <br>
+                      } <br><br>
+                      wordValue(words1) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////6/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-6"
+            aria-expanded="true" aria-controls="text-6" onclick=buttonTxt(event)>
+            6. Bit Counting
+          </button>
+        </h2>
+        <div id="text-6" class="accordion-collapse collapse" aria-labelledby="title-6"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Write a function that takes an integer as input, and returns the number of bits that are equal to one in the
+            binary representation of that number. <br>
+            You can guarantee that input is non-negative. <br>
+            Example: <br>
+            <code class="text-info">
+              The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+            </code>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-6">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-6" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-6" aria-expanded="true" aria-controls="s-text-6"
+                onclick='changeBtnText("button-6")'>
+                Show Solution
+              </button>
+              <div id="s-text-6" class="accordion-collapse collapse solution" aria-labelledby="button-6"
+                data-bs-parent="#solution-6">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function countBits(n) { <br>
+                    counter = 0;<br>
+                    n.toString(2).split('').forEach(el => el==='1' ? counter++ : counter);<br>
+                    console.log(counter);<br>
+                    return counter;<br>
+                    };<br><br>
+
+                    countBits(1234)<br>
+                    countBits(5)<br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////7/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-7"
+            aria-expanded="true" aria-controls="text-7" onclick=buttonTxt(event)>
+            7. Multiples of 3 or 5
+          </button>
+        </h2>
+        <div id="text-7" class="accordion-collapse collapse " aria-labelledby="title-7"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+
+            <code class="text-info">
+              If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.<br>
+              The sum of these multiples is 23. <br>
+            </code>
+            Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed
+            in.<br>
+            Note: If the number is a multiple of both 3 and 5, only count it once. Also, if a number is negative, return
+            0(for languages that do have them) <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-7">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-7" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-7" aria-expanded="true" aria-controls="s-text-7"
+                onclick='changeBtnText("button-7")'>
+                Show Solution
+              </button>
+              <div id="s-text-7" class="accordion-collapse collapse solution" aria-labelledby="button-7"
+                data-bs-parent="#solution-7">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function solution(number) { <br>
+                    let appropriateNumbers = []; <br>
+                    let finalSum = []; <br>
+                    for (let i = 1; i < number; i++) { appropriateNumbers.push(i) } appropriateNumbers.forEach(n=> {
+                      <br>
+                      if (n % 3 === 0 || n % 5 === 0) { <br>
+                      finalSum.push(n) <br>
+                      } <br>
+                      }) <br>
+                      finalSum = finalSum.reduce((a, b) => a + b, 0) <br> <br>
+                      console.log(appropriateNumbers); <br>
+                      console.log(finalSum); <br>
+                      return finalSum <br>
+                      } <br> <br>
+
+                      solution(10); <br>
+                      solution(20); <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////8/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-8"
+            aria-expanded="true" aria-controls="text-8" onclick=buttonTxt(event)>
+            8. Digital Root
+          </button>
+        </h2>
+        <div id="text-8" class="accordion-collapse collapse" aria-labelledby="title-8"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Digital root is the recursive sum of all the digits in a number. <br>
+            Given n, take the sum of the digits of n. <br>
+            If that value has more than one digit, continue reducing in this way until a single-digit number is
+            produced. <br>
+            This is only applicable to the natural numbers.<br><br>
+
+            Examples: <br>
+            <code class="text-info">
+              16 --> 1 + 6 = 7 <br>
+              942 --> 9 + 4 + 2 = 15 --> 1 + 5 = 6<br>
+              132189 --> 1 + 3 + 2 + 1 + 8 + 9 = 24 --> 2 + 4 = 6<br>
+              493193 --> 4 + 9 + 3 + 1 + 9 + 3 = 29 --> 2 + 9 = 11 --> 1 + 1 = 2<br>
+            </code>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-8">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-8" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-8" aria-expanded="true" aria-controls="s-text-8"
+                onclick='changeBtnText("button-8")'>
+                Show Solution
+              </button>
+              <div id="s-text-8" class="accordion-collapse collapse solution" aria-labelledby="button-8"
+                data-bs-parent="#solution-8">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function digitalRoot(num) { <br>
+                    sum = 0<br>
+                    helper = () => {<br>
+                    num = num.toString().split('').map(el => parseInt(el, 10));<br>
+                    num.forEach(el => sum += el);<br>
+                    if (sum > 9) {<br>
+                    num = sum<br>
+                    sum = 0;<br>
+                    helper()<br>
+                    }<br>
+                    }<br>
+                    helper()<br><br>
+
+                    console.log(sum);<br>
+                    return sum;<br>
+                    }<br><br>
+
+
+                    digitalRoot(942)<br>
+                    digitalRoot(493193)<br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////9/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-9"
+            aria-expanded="true" aria-controls="text-9" onclick=buttonTxt(event)>
+            9. Shark Bites
+          </button>
+        </h2>
+        <div id="text-9" class="accordion-collapse collapse" aria-labelledby="title-9"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Your friend invites you out to a cool floating pontoon around 1km off the beach. <br>
+            Among other things, the pontoon has a huge slide that drops you out right into the ocean, a small way from a
+            set of stairs used to climb out. <br>
+            As you plunge out of the slide into the water, you see a shark hovering in the darkness under the pontoon...
+            <br>
+
+            You need to work out if the shark will get to you before you can get to the pontoon. <br>
+            To make it easier... as you do the mental calculations in the water you either freeze when you realise you
+            are dead, or swim when you realise you can make it! <br>
+            You are given 5 variables: <br>
+
+            <code class="text-info">
+              sharkDistance = distance from the shark to the pontoon. The shark will eat you if it reaches you before
+              you
+              escape to the pontoon. <br>
+              sharkSpeed = how fast it can move in metres/second. <br>
+              pontoonDistance = how far you need to swim to safety in metres. <br>
+              youSpeed = how fast you can swim in metres/second. <br>
+              dolphin = a boolean, if true, you can half the swimming speed of the shark as the dolphin will attack it.
+              <br>
+            </code> <br>
+            The pontoon, you, and the shark are all aligned in one dimension. <br>
+            If you make it, return "Alive!", if not, return "Shark Bait!". <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-9">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-9" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-9" aria-expanded="true" aria-controls="s-text-9"
+                onclick='changeBtnText("button-9")'>
+                Show Solution
+              </button>
+              <div id="s-text-9" class="accordion-collapse collapse solution" aria-labelledby="button-9"
+                data-bs-parent="#solution-9">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){ <br>
+
+                    // dolphin ? sharkSpeed = sharkSpeed/2 : sharkSpeed = sharkSpeed<br>
+                    if(dolphin) sharkSpeed = sharkSpeed/2<br>
+
+                    a = sharkDistance/sharkSpeed<br>
+                    b = pontoonDistance/youSpeed<br>
+
+                    if(a > b) { <br>
+                    console.log("Alive!"); <br>
+                    return "Alive!"<br>
+                    } else { <br>
+                    console.log("Shark Bait!")<br>
+                    return "Shark Bait!"}<br>
+                    }<br><br>
+
+                    shark(12, 50, 4, 8, true) <br>
+                    shark(7, 55, 4, 16, true) <br>
+                    shark(24, 0, 4, 8, true) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////10/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-10"
+            aria-expanded="true" aria-controls="text-10" onclick=buttonTxt(event)>
+            10. Football Championship
+          </button>
+        </h2>
+        <div id="text-10" class="accordion-collapse collapse" aria-labelledby="title-10"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Our football team finished the championship. <br>
+            The result of each match look like "x:y". <br>
+            Results of all matches are recorded in the collection. <br>
+            For example: ['3:1', '0:1', '0:0', ...] <br>
+            Write a function that takes such collection and counts the points of our team in the championship. <br>
+            Rules for counting points for each match: <br>
+            <code class="text-info">
+              if x > y -> 3 points <br>
+              if x = y -> 1 points <br>
+              if x < y -> 0 points <br>
+            </code>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-10">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-10" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-10" aria-expanded="true" aria-controls="s-text-10"
+                onclick='changeBtnText("button-10")'>
+                Show Solution
+              </button>
+              <div id="s-text-10" class="accordion-collapse collapse solution" aria-labelledby="button-10"
+                data-bs-parent="#solution-10">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    games1 =['3:1', '0:1', '0:0', '2:1', '2:2', '1:0', '3:2', '0:2', '2:1', '0:1'] <br> <br>
+
+                    function points(games) { <br>
+                    goals = [] <br>
+                    sum = 0 <br>
+                    games.forEach(g => goals.push(g.split('').filter(el => el !== ':'))); <br>
+                    goals.forEach(el => { <br>
+                    if ( parseInt(el[0], 10) > parseInt(el[1], 10)) { <br>
+                    sum += 3 <br>
+                    } else if ( parseInt(el[0], 10) === parseInt(el[1], 10)) { <br>
+                    sum += 1 <br>
+                    } <br>
+                    }); <br> <br>
+
+                    console.log(games); <br>
+                    console.log(sum); <br>
+                    return sum;
+                    } <br> <br>
+
+
+                    points(games1) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////11/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-11">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-11"
+            aria-expanded="true" aria-controls="text-11" onclick=buttonTxt(event)>
+            11. Remove Every Second Element
+          </button>
+        </h2>
+        <div id="text-11" class="accordion-collapse collapse" aria-labelledby="title-11"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Take an array and remove every second element out of that array. <br>
+            Always keep the first element out of that array and start removing with the next element <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-11">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-11" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-11" aria-expanded="true" aria-controls="s-text-11"
+                onclick='changeBtnText("button-11")'>
+                Show Solution
+              </button>
+              <div id="s-text-11" class="accordion-collapse collapse solution" aria-labelledby="button-11"
+                data-bs-parent="#solution-11">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    const fruits = ['Banana', 'Kiwi', 'Orange', 'Apple', 'Peach', 'Mango'] <br>
+                    function removeEverySecond(arr) { <br>
+                    arr = arr.filter((el,index) => index %2 === 0 ) <br>
+                    console.log(arr); <br>
+                    return arr <br>
+                    } <br>
+                    removeEverySecond(fruits); <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////12/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-12">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-12"
+            aria-expanded="true" aria-controls="text-12" onclick=buttonTxt(event)>
+            12. Duplicate Letters
+          </button>
+        </h2>
+        <div id="text-12" class="accordion-collapse collapse" aria-labelledby="title-12"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            In this Kata, you will be given an array of strings and your task is to remove all consecutive duplicate
+            letters from each string in the array. <br>
+
+            For example: <br>
+            <code class="text-info">
+              dup(["abracadabra","allottee","assessee"]) = ["abracadabra","alote","asese"] <br>
+              dup(["kelless","keenness"]) = ["keles","kenes"] <br>
+            </code>
+            Strings will be alphabet characters only. <br>
+            Don't worry about lower and upper case. See test cases for moreexamples.
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-12">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-12" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-12" aria-expanded="true" aria-controls="s-text-12"
+                onclick='changeBtnText("button-12")'>
+                Show Solution
+              </button>
+              <div id="s-text-12" class="accordion-collapse collapse solution" aria-labelledby="button-12"
+                data-bs-parent="#solution-12">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    let words1 = ["abracadabra", "allotteeeee", "assessee"] <br> <br>
+
+                    function dup(s) { <br>
+                    for (let i = 0; i < s.length; i++) { s[i]=s[i].split('') <br>
+                      helper=()=> { <br>
+                      s[i].forEach((el, idx, arr) => { <br>
+                      if (arr[idx] === arr[idx - 1]) { <br>
+                      s[i].splice(idx, 1) <br>
+                      helper() <br>
+                      }})} <br>
+                      helper() <br>
+                      s[i] = s[i].join('') <br>
+                      } <br>
+                      console.log(s); <br>
+                      return s <br>
+                      }; <br> <br>
+
+                      dup(words1)
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////13/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-13">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-13"
+            aria-expanded="true" aria-controls="text-13" onclick=buttonTxt(event)>
+            13. Disem Vowel
+          </button>
+        </h2>
+        <div id="text-13" class="accordion-collapse collapse" aria-labelledby="title-13"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Trolls are attacking your comment section! <br>
+
+            A common way to deal with this situation is to remove all of the vowels from the trolls' comments,
+            neutralizing the threat.<br>
+            Your task is to write a function that takes a string and return a new string with all vowels removed.<br>
+            <code class="text-info">
+              For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+            </code> <br>
+            Note: for this kata y isn't considered a vowel.
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-13">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-13" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-13" aria-expanded="true" aria-controls="s-text-13"
+                onclick='changeBtnText("button-13")'>
+                Show Solution
+              </button>
+              <div id="s-text-13" class="accordion-collapse collapse solution" aria-labelledby="button-13"
+                data-bs-parent="#solution-13">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function disemVowel(str) { <br>
+                    let vowels = 'aeiou' <br>
+                    str = str.split('').filter(l => !vowels.includes(l.toLowerCase())).join('') <br>
+                    console.log(str); <br>
+                    return str <br>
+                    } <br>
+
+                    disemVowel('There are no vowels here') <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////14/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-14">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-14"
+            aria-expanded="true" aria-controls="text-14" onclick=buttonTxt(event)>
+            14. Highest and Lowest
+          </button>
+        </h2>
+        <div id="text-14" class="accordion-collapse collapse" aria-labelledby="title-14"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            In this little assignment you are given a string of space separated numbers, and have to return the highest
+            and lowest number. <br>
+            Example: <br>
+            <code class="text-info">
+              Kata.HighAndLow("1 2 3 4 5"); // return "5 1" <br>
+              Kata.HighAndLow("1 2 -3 4 5"); // return "5 -3" <br>
+              Kata.HighAndLow("1 9 3 4 -5"); // return "9 -5" <br>
+            </code> <br>
+            Notes: <br>
+            All numbers are valid Int32, no need to validate them. <br>
+            There will always be at least one number in the input string. <br>
+            Output string must be two numbers separated by a single space, and highest number is first. <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-14">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-14" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-14" aria-expanded="true" aria-controls="s-text-14"
+                onclick='changeBtnText("button-14")'>
+                Show Solution
+              </button>
+              <div id="s-text-14" class="accordion-collapse collapse solution" aria-labelledby="button-14"
+                data-bs-parent="#solution-14">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function highAndLow(numbers){ <br>
+                    numbers = numbers.split(' ').map(n => n = parseInt(n, 10)).sort((a,b)=>a-b) <br>
+                    max = numbers.reduce((a,b)=>Math.max(a,b)); <br>
+                    min = numbers.reduce((a,b)=>Math.min(a,b)); <br>
+                    maxmin=[].concat(max,min).join(' ') <br><br>
+                    console.log(numbers) <br>
+                    console.log(max)<br>
+                    console.log(min)<br>
+                    console.log(maxmin)<br>
+                    return maxmin <br>
+                    } <br><br>
+                    highAndLow('85 56 85 12 38') <br>
+
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////15/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-15">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-15"
+            aria-expanded="true" aria-controls="text-15" onclick=buttonTxt(event)>
+            15. Hungarian Dative Suffix
+          </button>
+        </h2>
+        <div id="text-15" class="accordion-collapse collapse" aria-labelledby="title-15"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Vowel harmony is a phenomenon in some languages. <br>
+            It means that "A vowel or vowels in a word are changed to sound the same (thus "in harmony.")" (wikipedia).
+            <br>
+            This kata is based on vowel harmony in Hungarian. <br>
+
+            Task: <br>
+            Your goal is to create a function dative() (Dative() in C#) which returns the valid form of a valid
+            Hungarian word w in dative case i. e. append the correct suffix nek or nak to the word w based on vowel
+            harmony rules. <br>
+
+            Vowel Harmony Rules (simplified) <br>
+            When the last vowel in the word is: <br>
+            a front vowel (e, é, i, í, ö, ő, ü, ű) the suffix is -nek <br>
+            a back vowel (a, á, o, ó, u, ú) the suffix is -nak <br>
+            Examples: <br>
+            <code class="text-info">
+              dative("ablak") == "ablaknak" <br>
+              dative("szék") == "széknek" <br>
+              dative("otthon") == "otthonnak" <br>
+            </code> <br>
+
+            Preconditions: <br>
+            To keep it simple: All words end with a consonant :) <br>
+            All strings are unicode strings. <br>
+            There are no grammatical exceptions in the tests. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-15">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-15" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-15" aria-expanded="true" aria-controls="s-text-15"
+                onclick='changeBtnText("button-15")'>
+                Show Solution
+              </button>
+              <div id="s-text-15" class="accordion-collapse collapse solution" aria-labelledby="button-15"
+                data-bs-parent="#solution-15">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function dative(word) { <br>
+
+                    frontVowels = [ 'é', 'i', 'í', 'ö', 'ő', 'ü', 'ű'] <br>
+                    backVowels = ['e','a', 'á', 'o', 'ó', 'u', 'ú'] <br>
+                    suff = '' <br> <br>
+
+                    frontVowels.forEach(l => { <br>
+                    if (l === word.split('').reverse()[1] || l === word.split('').reverse()[2]) { <br>
+                    suff = 'nek' <br>
+                    } <br>
+                    }); <br> <br>
+
+                    if (suff === '') suff = 'nak' <br>
+                    word = `${word}${suff}` <br>
+
+                    console.log(word) <br>
+                    return word<br>
+                    } <br>
+
+                    dative('ablak') <br>
+                    dative('otthon') <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////16/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-16">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-16"
+            aria-expanded="true" aria-controls="text-16" onclick=buttonTxt(event)>
+            16. Alternating Case
+          </button>
+        </h2>
+        <div id="text-16" class="accordion-collapse collapse" aria-labelledby="title-16"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. <br>
+            For example: <br>
+            <code class="text-info">
+              "hello world".toAlternatingCase() === "HELLO WORLD" <br>
+              "HELLO WORLD".toAlternatingCase() === "hello world" <br>
+              "hello WORLD".toAlternatingCase() === "HELLO world" <br>
+              "HeLLo WoRLD".toAlternatingCase() === "hEllO wOrld" <br>
+              "12345".toAlternatingCase() === "12345" // Non-alphabetical characters are unaffected <br>
+              "1a2b3c4d5e".toAlternatingCase() === "1A2B3C4D5E" <br>
+              "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE" <br>
+            </code><br>
+            As usual, your function/method should be pure, i.e. it should not mutate the original string. <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-16">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-16" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-16" aria-expanded="true" aria-controls="s-text-16"
+                onclick='changeBtnText("button-16")'>
+                Show Solution
+              </button>
+              <div id="s-text-16" class="accordion-collapse collapse solution" aria-labelledby="button-16"
+                data-bs-parent="#solution-16">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function alternatingCase(text) { <br>
+                    text = text.split('').map(changeText).join(''); <br> <br>
+
+                    function changeText(char) { <br>
+                    // if (char.toLowerCase() === char) { <br>
+                    // return char = char.toUpperCase(); <br>
+                    // } else { <br>
+                    // return char = char.toLowerCase(); <br>
+                    // } <br>
+                    return char.toLowerCase() === char ? char.toUpperCase() : char.toLowerCase(); <br>
+                    } <br>
+                    console.log(text) <br>
+                    return text <br>
+                    } <br> <br>
+
+                    alternatingCase('Hello World') <br>
+                    alternatingCase('HELLO WORLD') <br>
+                    alternatingCase('hello world') <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////17/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-17">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-17"
+            aria-expanded="true" aria-controls="text-17" onclick=buttonTxt(event)>
+            17. Add Binary
+          </button>
+        </h2>
+        <div id="text-17" class="accordion-collapse collapse" aria-labelledby="title-17"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Implement a function that adds two numbers together and returns their sum in binary. <br>
+            The conversion can be done before, or after the addition. <br>
+            The binary number returned should be a string. <br>
+            <div class="accordion mt-5 d-flex flex-column" id="solution-17">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-17" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-17" aria-expanded="true" aria-controls="s-text-17"
+                onclick='changeBtnText("button-17")'>
+                Show Solution
+              </button>
+              <div id="s-text-17" class="accordion-collapse collapse solution" aria-labelledby="button-17"
+                data-bs-parent="#solution-17">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function addBinary(a, b) { <br>
+                    let binaryString = (a + b).toString(2); // 2 u zagradi pretvara decimalni broj u binarni <br>
+                    console.log(binaryString); <br>
+                    return binaryString <br>
+                    } <br>
+                    <br>
+                    addBinary(3, 8); <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ///////////////////////////18/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-18">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-18"
+            aria-expanded="true" aria-controls="text-18" onclick=buttonTxt(event)>
+            18. Credit Card Mask
+          </button>
+        </h2>
+        <div id="text-18" class="accordion-collapse collapse" aria-labelledby="title-18"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Usually when you buy something, you're asked whether your credit card number, phone number or answer to your
+            most secret question is still correct. <br>
+            However, since someone could look over your shoulder, you don't want that shown on your screen. <br>
+            Instead, we mask it. <br>
+            Your task is to write a function maskify, which changes all but the last four characters into '#'. <br>
+
+            Examples: <br>
+            <code class="text-info">
+              maskify("4556364607935616") == "############5616" <br>
+              maskify( "64607935616") == "#######5616" <br>
+              maskify( "1") == "1" <br>
+              maskify( "") == "" <br> <br>
+              maskify("Skippy") == "##ippy" <br>
+              maskify("Nananananananananananananananana Batman!") == "####################################man!" <br>
+            </code>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-18">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-18" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-18" aria-expanded="true" aria-controls="s-text-18"
+                onclick='changeBtnText("button-18")'>
+                Show Solution
+              </button>
+              <div id="s-text-18" class="accordion-collapse collapse solution" aria-labelledby="button-18"
+                data-bs-parent="#solution-18">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function maskify(cc) { <br>
+                    cc = cc.split('').reverse() <br>
+                    for (let i = 0; i < cc.length; i++) { <br>
+                      if (i > 3) { <br>
+                      cc[i] = '#' <br>
+                      } <br>
+                      } <br>
+                      cc = cc.reverse().join('') <br>
+                      console.log(cc) <br>
+                      return cc <br>
+                      } <br> <br>
+
+                      maskify('285253454') <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////19/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-19">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-19"
+            aria-expanded="true" aria-controls="text-19" onclick=buttonTxt(event)>
+            19. Sort Array By String Length
+          </button>
+        </h2>
+        <div id="text-19" class="accordion-collapse collapse" aria-labelledby="title-19"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Write a function that takes an array of strings as an argument and returns a sorted array containing the
+            same strings, ordered from shortest to longest. <br>
+
+            <code class="text-info">
+              For example, if this array were passed as an argument: <br>
+              ["Telescopes", "Glasses", "Eyes", "Monocles"] <br>
+              Your function would return the following array: <br>
+              ["Eyes", "Glasses", "Monocles", "Telescopes"] <br>
+            </code>
+
+            All of the strings in the array passed to your function will be different lengths, so you will not have to
+            decide how to order multiple strings of the same length. <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-19">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-19" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-19" aria-expanded="true" aria-controls="s-text-19"
+                onclick='changeBtnText("button-19")'>
+                Show Solution
+              </button>
+              <div id="s-text-19" class="accordion-collapse collapse solution" aria-labelledby="button-19"
+                data-bs-parent="#solution-19">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    const fruits = ['Banana', 'Kiwi', 'Orange', 'Apple', 'Peach', 'Mango'] <br> <br>
+
+                    function sortByLength(array) { <br>
+                    // array = array.sort((a,b) => a.length > b.length ? 1 : -1) <br>
+                    array = array.sort((a,b) => a.length - b.length) <br>
+                    console.log(array) <br>
+                    return array <br>
+                    } <br> <br>
+
+                    sortByLength(fruits) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////20/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-20">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-20"
+            aria-expanded="true" aria-controls="text-20" onclick=buttonTxt(event)>
+            20. Find Numbers Which Are Divisible By Given Number
+          </button>
+        </h2>
+        <div id="text-20" class="accordion-collapse collapse" aria-labelledby="title-20"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Complete the function which takes two arguments and returns all numbers which are divisible by the given
+            divisor. <br>
+            First argument is an array of numbers and the second is the divisor. <br> <br>
+
+            Example: <br>
+            <code class="text-info">
+              divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6] <br>
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-20">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-20" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-20" aria-expanded="true" aria-controls="s-text-20"
+                onclick='changeBtnText("button-20")'>
+                Show Solution
+              </button>
+              <div id="s-text-20" class="accordion-collapse collapse solution" aria-labelledby="button-20"
+                data-bs-parent="#solution-20">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    array1 = [1,2,3,4,5,6,7,8,9,10] <br> <br>
+
+                    function divisibleBy(numbers, divisor) { <br>
+                    numbers = numbers.filter(n => n % divisor === 0) <br>
+                    console.log(numbers) <br>
+                    return numbers <br>
+                    } <br> <br>
+
+                    divisibleBy(array1, 2) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////21/////////////////////////// -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="title-21">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-21"
+            aria-expanded="true" aria-controls="text-21" onclick=buttonTxt(event)>
+            21. Remove Duplicate Words
+          </button>
+        </h2>
+        <div id="text-21" class="accordion-collapse collapse" aria-labelledby="title-21"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Your task is to remove all duplicate words from a string, leaving only single (first) words entries. <br>
+            Example: <br>
+
+            <code class="text-info">
+              Input: <br>
+              'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta' <br>
+              Output: <br>
+              'alpha beta gamma delta' <br>
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-21">
+              <button class="btn btn-outline-info align-self-end collapsed" id="button-21" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-21" aria-expanded="true" aria-controls="s-text-21"
+                onclick='changeBtnText("button-21")'>
+                Show Solution
+              </button>
+              <div id="s-text-21" class="accordion-collapse collapse solution" aria-labelledby="button-21"
+                data-bs-parent="#solution-21">
+                <div class="mt-21 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    let sentence1 = 'alpha betta betta gamma gamma delta gamma gamma delta epsilon' <br><br>
+
+                    function removeDuplicateWords(sentence) {<br>
+                    sentence = sentence.split(' ')<br>
+                    let obj = {}<br>
+                    words = []<br>
+
+                    for (let i = 0; i < sentence.length; i++) { obj[sentence[i]]=obj[sentence[i]] + 1 || 1; } <br>
+                    for (let key of Object.keys(obj)) { words=words.concat(key) } words=words.join(' ')<br><br>
+
+                    console.log(words)<br>
+                    return words<br>
+                    }<br><br>
+
+                    removeDuplicateWords(sentence1)
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>
