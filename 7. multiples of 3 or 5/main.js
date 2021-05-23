@@ -5,30 +5,22 @@ Note: If the number is a multiple of both 3 and 5, only count it once. Also, if 
 */
 
 function solution(number) {
-  // let helper = [];
-  // let helper2 = [];
-  // for (let i = 1; i < number; i++) {
-  //   helper.push(i)
-  // }
-
-
-  // helper.forEach(n => {
-  //   if (n % 3 === 0 || n % 5 === 0) {
-  //     helper2.push(n)
-  //   } 
-  // })
-  // helper2 = helper2.reduce((a,b)=>a+b, 0)
-  // console.log(helper);
-  // console.log(helper2);
-
-  let sum = 0;
-  for (let i = 0; i < number; i++) {
-    if (i % 3 || i % 5) {
-      sum += i
-    }
+  let helper = [];
+  let helper2 = [];
+  for (let i = 1; i < number; i++) {
+    helper.push(i)
   }
 
-  console.log(sum);
+
+  helper.forEach(n => {
+    if (n % 3 === 0 || n % 5 === 0) {
+      helper2.push(n)
+    } 
+  })
+  helper2 = helper2.reduce((a,b)=>a+b, 0)
+  console.log(helper);
+  console.log(helper2);
+
 }
 
-solution(20);
+solution(10);

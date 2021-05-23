@@ -1,8 +1,11 @@
 * {
   box-shadow: none !important;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  color: rgb(83, 82, 82);
 }
 
-body > .container {
+body>.container {
   margin-bottom: calc(70vh);
 }
 
@@ -17,33 +20,57 @@ code {
 .value {
   color: #e67e22
 }
+
 .comment {
   color: #00cec9
 }
 
 .accordion-button {
-  background: #b2bec3;
+  background: #333;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  /* display:flex; 
+  justify-content: space-between; 
+  align-items: space-between; */
+  font-weight: 500;
 
 }
 
-.solution, .accordion-collapse {
+.solution,
+.accordion-collapse {
   transition: .8s all;
 }
 
 h1 {
-  color: #f0932b;
+  /* color: #bf953f; */
+  color: rgb(236, 182, 19);
 }
 
 .accordion-button:not(.collapsed) {
-  background: #636e72;
-  color: #2d3436;
-  font-weight: 600;
+  background-image: linear-gradient(to right, #bf953f, #333);
+  /* color: #2d3436; */
+  color: #fff;
 }
 
-.accordion-button::after, .btn-outline-info::after {
+.accordion-button:hover {
+  background-image: linear-gradient(to right, #bf953f, rgb(73, 73, 73), #333);
+}
+
+.accordion-button span {
+  padding-left: 1rem;
+  height: 1.5rem;
+  margin-left: auto;
+}
+
+.accordion-button span img {
+  height: 100%;
+  border-radius: .5rem;
+}
+
+.accordion-button::after,
+.btn-outline-warning::after {
   transition: 1s all;
+  margin-left: 1rem
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -52,11 +79,11 @@ h1 {
 }
 
 
-.btn-outline-info {
+.btn-outline-warning {
   position: relative;
   display: flex;
   align-items: center;
-  width: 10rem;
+  width: 10.5rem;
   height: 2.5rem;
   /* padding: 1rem 1.25rem; */
   font-size: 1rem;
@@ -64,7 +91,7 @@ h1 {
   overflow-anchor: none;
 }
 
-.btn-outline-info::after {
+.btn-outline-warning::after {
   /* flex-shrink: 0; */
   width: 1rem;
   height: 1rem;
@@ -80,7 +107,78 @@ h1 {
 
 }
 
-.btn-outline-info:not(.collapsed)::after {
+.btn-outline-warning:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   transform: rotate(-180deg);
+}
+
+.accordion-body {
+  background-color: rgb(251, 249, 249);
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* height: 8rem; */
+  flex-wrap: wrap;
+}
+
+
+
+
+.hex {
+  display: inline-block;
+  position: relative;
+  width: 85px;
+  height: 40px;
+  margin: .25rem;
+  background: rgb(236, 182, 19);
+  box-sizing: border-box;
+  clip-path: polygon(0% 50%,
+      15% 0,
+      85% 0,
+      100% 50%,
+      100% 50%,
+      85% 100%,
+      15% 100%,
+      0% 50%,
+      0% 0%)
+}
+
+.hex .btn-filter {
+  position: relative;
+  margin: 0.25rem;
+  background-color: #333;
+  color: #ccc;
+
+  top: -2px;
+  left: -1px;
+  width: 79px;
+  height: 36px;
+  font-weight: 600;
+  font-size: 1rem;
+  clip-path: polygon(0% 50%,
+      14.5% 0,
+      85.5% 0,
+      100% 50%,
+      100% 50%,
+      85.5% 100%,
+      14.5% 100%,
+      0% 50%,
+      0% 0%)
+}
+
+.btn-filter:hover {
+  background-color:rgb(236, 182, 19);
+  color: #333
+}
+
+
+
+
+@media (max-width: 768px) {
+  h3 a img {
+    width: 19rem
+  }
 }

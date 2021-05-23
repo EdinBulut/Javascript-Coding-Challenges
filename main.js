@@ -30,4 +30,37 @@ function buttonTxt(e) {
   // console.log(e);
 }
 
+function filterKyu(e) {
+  let filterBtns = document.getElementsByClassName('btn-filter')
+  let tasks = document.getElementsByClassName('accordion-item')
+  let kyu = e.target.innerText
+  let c = 0
+
+  
+  for (let i = 0; i < filterBtns.length; i++) {
+    filterBtns[i].style.background = '#333'
+    filterBtns[i].style.color = '#ccc'
+  }
+  e.target.style.background = 'rgb(236, 182, 19)'
+  e.target.style.color = '#333'
+  
+  for (let i = 0; i < tasks.length; i++) {
+    let text = tasks[i].children[0].children[0].innerHTML.trim().split(' ')
+    text.splice(0, 1)
+    text = text.join(' ')
+    if (kyu === 'All') {
+      tasks[i].children[0].children[0].innerHTML = `${i+1}. ${text}`
+      tasks[i].style.display = 'block'
+    } else {
+      tasks[i].style.display = 'none'
+      if (tasks[i].className.search(kyu) !== -1) {
+        tasks[i].style.display = 'block'
+        c++
+        tasks[i].children[0].children[0].innerHTML = `${c}. ${text}`
+      };
+    }
+  }
+
+
+}
 /////////////////////////////////////////////////////////

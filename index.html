@@ -8,23 +8,50 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
-  <link rel="shortcut icon" href="js.jpg" />
+  <link rel="shortcut icon" href="images/js.jpg" />
   <title>Javascript Coding Challenges</title>
 </head>
 
 <body>
   <div class="container pb-5">
     <h1 class="text-center pt-5">Javascript Coding Challenges</h1>
-    <h3 class="text-center pb-5 text-secondary">Edin Bulut</h3>
+    <h3 class="text-center pb-5 text-secondary">
+      <a href="https://www.codewars.com/users/Edin%20Bulut" title="https://www.codewars.com/users/Edin%20Bulut">
+        <img src="https://www.codewars.com/users/Edin%20Bulut/badges/large" alt="">
+      </a>
+    </h3>
+
+      <div class="btns mb-4" role="group" aria-label="First group">
+        <div class="hex">
+          <button type="button" style="background:rgb(236, 182, 19); color: #333" class="btn btn-filter" onclick=filterKyu(event)>All</button>
+        </div>
+        <div class="hex">
+          <button type="button" class="btn btn-filter" onclick=filterKyu(event)>8kyu</button>
+        </div>
+        <div class="hex">
+          <button type="button" class="btn btn-filter" onclick=filterKyu(event)>7kyu</button>
+        </div>
+        <div class="hex">
+          <button type="button" class="btn btn-filter" onclick=filterKyu(event)>6kyu</button>
+        </div>
+        <div class="hex">
+          <button type="button" class="btn btn-filter" onclick=filterKyu(event)>5kyu</button>
+        </div>
+        
+      </div>
+   
+
     <div class="accordion mb-5" id="codingChallenges">
 
-
       <!-- ///////////////////////////1/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-1">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-1"
             aria-expanded="true" aria-controls="text-1" onclick=buttonTxt(event)>
-            1. Facebook likes
+            1. Who likes it?
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-1" class="accordion-collapse collapse" aria-labelledby="title-1"
@@ -43,7 +70,7 @@
               likes ["Alex", "Jacob", "Mark", "Max"] -- must be "Alex, Jacob and 2 others like this"
             </code><br>
             <div class="accordion mt-5 d-flex flex-column" id="solution-1">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-1" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-1" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-1" aria-expanded="true" aria-controls="s-text-1"
                 onclick='changeBtnText("button-1")'>
                 Show Solution
@@ -134,11 +161,14 @@
 
 
       <!-- ///////////////////////////2/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-2">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-2"
             aria-expanded="true" aria-controls="text-2" onclick=buttonTxt(event)>
-            2. Find Uniq Number
+            2. Find The Unique Number
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-2" class="accordion-collapse collapse" aria-labelledby="title-2"
@@ -154,7 +184,7 @@
             The tests contain some very huge arrays, so think about performance. <br>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-2">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-2" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-2" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-2" aria-expanded="true" aria-controls="s-text-2"
                 onclick='changeBtnText("button-2")'>
                 Show Solution
@@ -198,11 +228,14 @@
 
 
       <!-- ///////////////////////////3/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-3">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-3"
             aria-expanded="true" aria-controls="text-3" onclick=buttonTxt(event)>
-            3. Find Odd or Even
+            3. IQ Test
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-3" class="accordion-collapse collapse" aria-labelledby="title-3"
@@ -227,7 +260,7 @@
             The tests contain some very huge arrays, so think about performance. <br>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-3">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-3" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-3" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-3" aria-expanded="true" aria-controls="s-text-3"
                 onclick='changeBtnText("button-3")'>
                 Show Solution
@@ -264,11 +297,14 @@
 
 
       <!-- ///////////////////////////4/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-4">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-4"
             aria-expanded="true" aria-controls="text-4" onclick=buttonTxt(event)>
-            4. Array Edition
+            4. Array.diff
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-4" class="accordion-collapse collapse" aria-labelledby="title-4"
@@ -287,7 +323,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-4">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-4" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-4" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-4" aria-expanded="true" aria-controls="s-text-4"
                 onclick='changeBtnText("button-4")'>
                 Show Solution
@@ -326,11 +362,14 @@
 
 
       <!-- ///////////////////////////5/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-5">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-5"
             aria-expanded="true" aria-controls="text-5" onclick=buttonTxt(event)>
-            5. Word Value
+            5. Word Values
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-5" class="accordion-collapse collapse" aria-labelledby="title-5"
@@ -359,7 +398,7 @@
 
 
             <div class="accordion  d-flex flex-column" id="solution-5">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-5" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-5" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-5" aria-expanded="true" aria-controls="s-text-5"
                 onclick='changeBtnText("button-5")'>
                 Show Solution
@@ -396,11 +435,14 @@
 
 
       <!-- ///////////////////////////6/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-6">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-6"
             aria-expanded="true" aria-controls="text-6" onclick=buttonTxt(event)>
             6. Bit Counting
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-6" class="accordion-collapse collapse" aria-labelledby="title-6"
@@ -416,7 +458,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-6">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-6" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-6" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-6" aria-expanded="true" aria-controls="s-text-6"
                 onclick='changeBtnText("button-6")'>
                 Show Solution
@@ -446,11 +488,14 @@
 
 
       <!-- ///////////////////////////7/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-7">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-7"
             aria-expanded="true" aria-controls="text-7" onclick=buttonTxt(event)>
             7. Multiples of 3 or 5
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-7" class="accordion-collapse collapse " aria-labelledby="title-7"
@@ -468,7 +513,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-7">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-7" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-7" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-7" aria-expanded="true" aria-controls="s-text-7"
                 onclick='changeBtnText("button-7")'>
                 Show Solution
@@ -506,11 +551,14 @@
 
 
       <!-- ///////////////////////////8/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-8">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-8"
             aria-expanded="true" aria-controls="text-8" onclick=buttonTxt(event)>
-            8. Digital Root
+            8. Sum Of Digits/ Digital Root
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-8" class="accordion-collapse collapse" aria-labelledby="title-8"
@@ -532,7 +580,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-8">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-8" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-8" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-8" aria-expanded="true" aria-controls="s-text-8"
                 onclick='changeBtnText("button-8")'>
                 Show Solution
@@ -573,11 +621,14 @@
 
 
       <!-- ///////////////////////////9/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 8kyu">
         <h2 class="accordion-header" id="title-9">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-9"
             aria-expanded="true" aria-controls="text-9" onclick=buttonTxt(event)>
-            9. Shark Bites
+            9. Shark Pontoon
+            <span >
+              <img src="images/8kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-9" class="accordion-collapse collapse" aria-labelledby="title-9"
@@ -609,7 +660,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-9">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-9" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-9" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-9" aria-expanded="true" aria-controls="s-text-9"
                 onclick='changeBtnText("button-9")'>
                 Show Solution
@@ -649,11 +700,14 @@
 
 
       <!-- ///////////////////////////10/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-10">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-10"
             aria-expanded="true" aria-controls="text-10" onclick=buttonTxt(event)>
             10. Football Championship
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-10" class="accordion-collapse collapse" aria-labelledby="title-10"
@@ -673,7 +727,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-10">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-10" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-10" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-10" aria-expanded="true" aria-controls="s-text-10"
                 onclick='changeBtnText("button-10")'>
                 Show Solution
@@ -715,11 +769,14 @@
 
 
       <!-- ///////////////////////////11/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 8kyu">
         <h2 class="accordion-header" id="title-11">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-11"
             aria-expanded="true" aria-controls="text-11" onclick=buttonTxt(event)>
             11. Remove Every Second Element
+            <span >
+              <img src="images/8kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-11" class="accordion-collapse collapse" aria-labelledby="title-11"
@@ -729,7 +786,7 @@
             Always keep the first element out of that array and start removing with the next element <br>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-11">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-11" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-11" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-11" aria-expanded="true" aria-controls="s-text-11"
                 onclick='changeBtnText("button-11")'>
                 Show Solution
@@ -757,11 +814,14 @@
 
 
       <!-- ///////////////////////////12/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 6kyu">
         <h2 class="accordion-header" id="title-12">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-12"
             aria-expanded="true" aria-controls="text-12" onclick=buttonTxt(event)>
-            12. Duplicate Letters
+            12. String Array Duplicates
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-12" class="accordion-collapse collapse" aria-labelledby="title-12"
@@ -780,7 +840,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-12">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-12" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-12" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-12" aria-expanded="true" aria-controls="s-text-12"
                 onclick='changeBtnText("button-12")'>
                 Show Solution
@@ -819,11 +879,14 @@
 
 
       <!-- ///////////////////////////13/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-13">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-13"
             aria-expanded="true" aria-controls="text-13" onclick=buttonTxt(event)>
-            13. Disem Vowel
+            13. Disemvowel Trolls
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-13" class="accordion-collapse collapse" aria-labelledby="title-13"
@@ -840,7 +903,7 @@
             Note: for this kata y isn't considered a vowel.
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-13">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-13" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-13" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-13" aria-expanded="true" aria-controls="s-text-13"
                 onclick='changeBtnText("button-13")'>
                 Show Solution
@@ -869,11 +932,14 @@
 
 
       <!-- ///////////////////////////14/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-14">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-14"
             aria-expanded="true" aria-controls="text-14" onclick=buttonTxt(event)>
             14. Highest and Lowest
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-14" class="accordion-collapse collapse" aria-labelledby="title-14"
@@ -894,7 +960,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-14">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-14" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-14" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-14" aria-expanded="true" aria-controls="s-text-14"
                 onclick='changeBtnText("button-14")'>
                 Show Solution
@@ -928,11 +994,14 @@
 
 
       <!-- ///////////////////////////15/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-15">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-15"
             aria-expanded="true" aria-controls="text-15" onclick=buttonTxt(event)>
-            15. Hungarian Dative Suffix
+            15. Hungarian Vowel Harmony
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-15" class="accordion-collapse collapse" aria-labelledby="title-15"
@@ -965,7 +1034,7 @@
             There are no grammatical exceptions in the tests. <br>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-15">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-15" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-15" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-15" aria-expanded="true" aria-controls="s-text-15"
                 onclick='changeBtnText("button-15")'>
                 Show Solution
@@ -1007,11 +1076,14 @@
 
 
       <!-- ///////////////////////////16/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 8kyu">
         <h2 class="accordion-header" id="title-16">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-16"
             aria-expanded="true" aria-controls="text-16" onclick=buttonTxt(event)>
             16. Alternating Case
+            <span >
+              <img src="images/8kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-16" class="accordion-collapse collapse" aria-labelledby="title-16"
@@ -1032,7 +1104,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-16">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-16" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-16" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-16" aria-expanded="true" aria-controls="s-text-16"
                 onclick='changeBtnText("button-16")'>
                 Show Solution
@@ -1071,11 +1143,14 @@
 
 
       <!-- ///////////////////////////17/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-17">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-17"
             aria-expanded="true" aria-controls="text-17" onclick=buttonTxt(event)>
             17. Add Binary
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-17" class="accordion-collapse collapse" aria-labelledby="title-17"
@@ -1085,7 +1160,7 @@
             The conversion can be done before, or after the addition. <br>
             The binary number returned should be a string. <br>
             <div class="accordion mt-5 d-flex flex-column" id="solution-17">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-17" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-17" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-17" aria-expanded="true" aria-controls="s-text-17"
                 onclick='changeBtnText("button-17")'>
                 Show Solution
@@ -1113,11 +1188,14 @@
 
 
       <!-- ///////////////////////////18/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-18">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-18"
             aria-expanded="true" aria-controls="text-18" onclick=buttonTxt(event)>
             18. Credit Card Mask
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-18" class="accordion-collapse collapse" aria-labelledby="title-18"
@@ -1141,7 +1219,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-18">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-18" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-18" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-18" aria-expanded="true" aria-controls="s-text-18"
                 onclick='changeBtnText("button-18")'>
                 Show Solution
@@ -1174,11 +1252,14 @@
       </div>
 
       <!-- ///////////////////////////19/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-19">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-19"
             aria-expanded="true" aria-controls="text-19" onclick=buttonTxt(event)>
             19. Sort Array By String Length
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-19" class="accordion-collapse collapse" aria-labelledby="title-19"
@@ -1199,7 +1280,7 @@
 
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-19">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-19" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-19" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-19" aria-expanded="true" aria-controls="s-text-19"
                 onclick='changeBtnText("button-19")'>
                 Show Solution
@@ -1229,11 +1310,14 @@
       </div>
 
       <!-- ///////////////////////////20/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 8kyu">
         <h2 class="accordion-header" id="title-20">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-20"
             aria-expanded="true" aria-controls="text-20" onclick=buttonTxt(event)>
             20. Find Numbers Which Are Divisible By Given Number
+            <span >
+              <img src="images/8kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-20" class="accordion-collapse collapse" aria-labelledby="title-20"
@@ -1249,7 +1333,7 @@
             </code>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-20">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-20" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-20" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-20" aria-expanded="true" aria-controls="s-text-20"
                 onclick='changeBtnText("button-20")'>
                 Show Solution
@@ -1278,11 +1362,14 @@
       </div>
 
       <!-- ///////////////////////////21/////////////////////////// -->
-      <div class="accordion-item">
+      <div class="accordion-item 7kyu">
         <h2 class="accordion-header" id="title-21">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-21"
             aria-expanded="true" aria-controls="text-21" onclick=buttonTxt(event)>
             21. Remove Duplicate Words
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
           </button>
         </h2>
         <div id="text-21" class="accordion-collapse collapse" aria-labelledby="title-21"
@@ -1299,7 +1386,7 @@
             </code>
 
             <div class="accordion mt-5 d-flex flex-column" id="solution-21">
-              <button class="btn btn-outline-info align-self-end collapsed" id="button-21" type="button"
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-21" type="button"
                 data-bs-toggle="collapse" data-bs-target="#s-text-21" aria-expanded="true" aria-controls="s-text-21"
                 onclick='changeBtnText("button-21")'>
                 Show Solution
@@ -1317,13 +1404,13 @@
                     words = []<br>
 
                     for (let i = 0; i < sentence.length; i++) { obj[sentence[i]]=obj[sentence[i]] + 1 || 1; } <br>
-                    for (let key of Object.keys(obj)) { words=words.concat(key) } words=words.join(' ')<br><br>
+                      for (let key of Object.keys(obj)) { words=words.concat(key) } words=words.join(' ')<br><br>
 
-                    console.log(words)<br>
-                    return words<br>
-                    }<br><br>
+                      console.log(words)<br>
+                      return words<br>
+                      }<br><br>
 
-                    removeDuplicateWords(sentence1)
+                      removeDuplicateWords(sentence1)
                   </code>
 
                 </div>
@@ -1332,6 +1419,1140 @@
           </div>
         </div>
       </div>
+
+      <!-- ///////////////////////////22/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-22">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-22"
+            aria-expanded="true" aria-controls="text-22" onclick=buttonTxt(event)>
+            22. Last Survivor
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-22" class="accordion-collapse collapse" aria-labelledby="title-22"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            You are given a string of letters and an array of numbers. <br>
+            The numbers indicate positions of letters that must be removed, in order, starting from the beginning of the
+            array. <br>
+            After each removal the size of the string decreases (there is no empty space). <br>
+            Return the only letter left. <br> <br>
+
+            Example: <br>
+            <code class="text-info"> <br>
+              let str = "zbk", arr = [0, 1] <br>
+              str = "bk", arr = [1] <br>
+              str = "b", arr = [] <br>
+              return 'b' <br>
+            </code> <br>
+
+            Notes: <br>
+            The given string will never be empty. <br>
+            The length of the array is always one less than the length of the string. <br>
+            All numbers are valid. <br>
+            There can be duplicate letters and numbers. <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-22">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-22" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-22" aria-expanded="true" aria-controls="s-text-22"
+                onclick='changeBtnText("button-22")'>
+                Show Solution
+              </button>
+              <div id="s-text-22" class="accordion-collapse collapse solution" aria-labelledby="button-22"
+                data-bs-parent="#solution-22">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function lastSurvivor(letters, coords) { <br>
+                    let arrOfLetters = letters.split(''); <br> <br>
+
+                    for (let i = 0; i < coords.length; i++) { <br>
+                      arrOfLetters.splice(coords[i],1) <br>
+                      } <br>
+
+                      console.log(arrOfLetters.toString()) <br>
+                      return arrOfLetters.join('') <br>
+                      } <br> <br>
+
+                      lastSurvivor('zbk', [0,1]) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////23/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-23">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-23"
+            aria-expanded="true" aria-controls="text-23" onclick=buttonTxt(event)>
+            23. The Barksdale Code
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-23" class="accordion-collapse collapse" aria-labelledby="title-23"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Fans of The Wire will appreciate this one. <br>
+            For those that haven't seen the show, the Barksdale Organization has a simple method for encoding telephone
+            numbers exchanged via pagers: <br>
+            "Jump to the other side of the 5 on the keypad, and swap 5's and 0's." <br>
+            Here's a keypad for visualization: <br> <br>
+            <div style="height: 12rem; display: flex; justify-content: center;">
+              <img src="images/barksdale.jpg" style="height: 100%;">
+            </div> <br>
+            Detective, we're hot on their trail! <br>
+            We have a big pile of encoded messages here to use as evidence, but it
+            would take way too long to decode by hand. <br>
+            Could you write a program to do this for us? <br> <br>
+            Write a funciton called decode(). <br>
+            Given an encoded string, return the actual phone number in string form. <br>
+            Don't worry about input validation, parenthesies, or hyphens. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-23">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-23" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-23" aria-expanded="true" aria-controls="s-text-23"
+                onclick='changeBtnText("button-23")'>
+                Show Solution
+              </button>
+              <div id="s-text-23" class="accordion-collapse collapse solution" aria-labelledby="button-23"
+                data-bs-parent="#solution-23">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function decode(string) { <br>
+                    let arr = [...string]; <br>
+                    let newArr = arr.map((item) => { <br>
+                    switch(item) { <br>
+                    case '0': return item = '5'; <br>
+                    case '1': return item = '9'; <br>
+                    case '2': return item = '8'; <br>
+                    case '3': return item = '7'; <br>
+                    case '4': return item = '6'; <br>
+                    case '5': return item = '0'; <br>
+                    case '6': return item = '4'; <br>
+                    case '7': return item = '3'; <br>
+                    case '8': return item = '2'; <br>
+                    case '9': return item = '1'; <br>
+                    } <br>
+                    }); <br>
+                    console.log(newArr); <br>
+                    return newArr.join(''); <br>
+                    } <br> <br>
+
+                    decode('0123456789'); <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////24/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-24">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-24"
+            aria-expanded="true" aria-controls="text-24" onclick=buttonTxt(event)>
+            24. Largest Pair Sum in Array
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-24" class="accordion-collapse collapse" aria-labelledby="title-24"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Given a sequence of numbers, find the largest pair sum in the sequence. <br> <br>
+            For example: <br>
+            <code class="text-info">
+              [10, 14, 2, 23, 19] --> 42 (= 23 + 19) <br>
+              [99, 2, 2, 23, 19] --> 122 (= 99 + 23) <br> <br>
+            </code>
+            Input sequence contains minimum two elements and every element is an integer. <br>
+
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-24">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-24" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-24" aria-expanded="true" aria-controls="s-text-24"
+                onclick='changeBtnText("button-24")'>
+                Show Solution
+              </button>
+              <div id="s-text-24" class="accordion-collapse collapse solution" aria-labelledby="button-24"
+                data-bs-parent="#solution-24">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function largestPairSum(numbers) <br>
+                    { <br>
+                    numbers.sort((a,b) => b-a) <br>
+                    console.log(numbers); <br>
+                    return numbers[0]+numbers[1] <br>
+                    } <br><br>
+
+                    largestPairSum([10, 14, 2, 23, 19])
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////25/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-25">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-25"
+            aria-expanded="true" aria-controls="text-25" onclick=buttonTxt(event)>
+            25. Small Enough
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-25" class="accordion-collapse collapse" aria-labelledby="title-25"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            You will be given an array and a limit value. <br>
+            You must check that all values in the array are below or equal to the limit value. <br>
+            If they are, return true. <br>
+            Else, return false. <br>
+            You can assume all values in the array are numbers. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-25">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-25" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-25" aria-expanded="true" aria-controls="s-text-25"
+                onclick='changeBtnText("button-25")'>
+                Show Solution
+              </button>
+              <div id="s-text-25" class="accordion-collapse collapse solution" aria-labelledby="button-25"
+                data-bs-parent="#solution-25">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function smallEnough(a, limit){ <br>
+                    console.log(a, limit) <br>
+                    return a.sort((a,b)=>b-a)[0]<=limit ? true:false <br>
+                      } <br> <br>
+
+                      smallEnough([10, 14, 2, 23, 19],27) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////26/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-26">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-26"
+            aria-expanded="true" aria-controls="text-26" onclick=buttonTxt(event)>
+            26. Printer Errors
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-26" class="accordion-collapse collapse" aria-labelledby="title-26"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            You will be given an array and a limit value. <br>
+            You must check that all values in the array are below or equal to the limit value. <br>
+            If they are, return true. <br>
+            Else, return false. <br>
+            You can assume all values in the array are numbers. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-26">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-26" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-26" aria-expanded="true" aria-controls="s-text-26"
+                onclick='changeBtnText("button-26")'>
+                Show Solution
+              </button>
+              <div id="s-text-26" class="accordion-collapse collapse solution" aria-labelledby="button-26"
+                data-bs-parent="#solution-26">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function printerError(s) { <br>
+                    // m = 'm'.charCodeAt() - 96 <br>
+                    // console.log(m) <br> <br>
+
+                    let err = 0 <br>
+                    arr= s.split('') <br>
+                    arr.forEach(a=> {if(a.charCodeAt() - 96 > 13) err++}) <br>
+                    console.log(`${err}/${arr.length}`); <br>
+                    return `${err}/${arr.length}`; <br>
+                    } <br> <br>
+
+                    printerError("aaaxbbbbyyhwawiwjjjwwm")
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////////////27/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-27">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-27"
+            aria-expanded="true" aria-controls="text-27" onclick=buttonTxt(event)>
+            27. Looking For a Benefactor
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-27" class="accordion-collapse collapse" aria-labelledby="title-27"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            <div>
+              The accounts of the "Fat to Fit Club (FFC)" association are supervised by John as a volunteered
+              accountant. <br>
+              The association is funded through financial donations from generous benefactors. <br>
+              John has a list of the first n donations: [14, 30, 5, 7, 9, 11, 15] <br>
+              He wants to know how much the next benefactor should give to <br>
+              the association so that the average of the first n + 1 donations should reach an average of 30. <br>
+              After doing the math he found 149. He thinks that he made a mistake. Could you help him? <br> <br>
+
+              <code class="text-info">
+                if dons = [14, 30, 5, 7, 9, 11, 15] then new_avg(dons, 30) --> 149 <br> <br>
+              </code>
+              The function new_avg(arr, navg) should return the expected donation (rounded up to the next integer) that
+              will permit to reach the average navg. <br>
+            </div>
+            <div>
+              Should the last donation be a non positive number (<= 0) John wants us to throw (or raise) an error or
+                return Nothing in Haskell return None in F#, Ocaml, Scala return -1 in C, Fortran, Nim, PowerShell, Go,
+                Pascal, Prolog, Lua echo ERROR in Shell raise-argument-error in Racket so that he clearly sees that his
+                expectations are not great enough. <br>
+                Notes: all donations and navg are numbers (integers or floats), arr can be empty. <br>
+                See examples below and "Test Samples" to see which return is to be done. <br>
+                <code class="text-info">
+                  new_avg([14, 30, 5, 7, 9, 11, 15], 92) should return 645 <br>
+                  new_avg([14, 30, 5, 7, 9, 11, 15], 2) should raise an error <br>
+                </code>
+                (ValueError or invalid_argument or argument-error or DomainError) or return `-1` or ERROR or Nothing or
+                None depending on the language. </div>
+            <div class="accordion mt-5 d-flex flex-column" id="solution-27">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-27" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-27" aria-expanded="true" aria-controls="s-text-27"
+                onclick='changeBtnText("button-27")'>
+                Show Solution
+              </button>
+              <div id="s-text-27" class="accordion-collapse collapse solution" aria-labelledby="button-27"
+                data-bs-parent="#solution-27">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function newAvg(arr, newavg) { <br>
+                    x = (arr.length + 1) * newavg - arr.reduce((a, b) => a + b, 0) <br>
+                    if (x <= 0) throw err <br>
+                      else return Math.ceil(x) <br>
+                      } <br> <br>
+
+                      newAvg([14, 30, 5, 7, 9, 11, 15], 92) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////28/////////////////////////// -->
+      <div class="accordion-item 6kyu">
+        <h2 class="accordion-header" id="title-28">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-28"
+            aria-expanded="true" aria-controls="text-28" onclick=buttonTxt(event)>
+            28. Which are in
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-28" class="accordion-collapse collapse" aria-labelledby="title-28"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1
+            which are substrings of strings of a2. <br> <br>
+
+            Example 1: <br>
+            <code class="text-info">
+              a1 = ["arp", "live", "strong"] <br>
+              a2 = ["lively", "alive", "harp", "sharp", "armstrong"] <br>
+              returns ["arp", "live", "strong"] <br> <br>
+            </code>
+
+            Example 2: <br>
+            <code class="text-info">
+              a1 = ["tarp", "mice", "bull"] <br>
+              a2 = ["lively", "alive", "harp", "sharp", "armstrong"] <br>
+              returns [] <br> <br>
+            </code>
+
+            Notes: <br>
+            Arrays are written in "general" notation. <br>
+            See "Your Test Cases" for examples in your language. <br>
+            In Shell bash a1 and a2 are strings. <br>
+            The return is a string where words are separated by commas. <br> <br>
+
+            Beware: r must be without duplicates. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-28">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-28" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-28" aria-expanded="true" aria-controls="s-text-28"
+                onclick='changeBtnText("button-28")'>
+                Show Solution
+              </button>
+              <div id="s-text-28" class="accordion-collapse collapse solution" aria-labelledby="button-28"
+                data-bs-parent="#solution-28">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    a1 = ['xyz', 'live', 'strong'] <br>
+                    a2 = ["lively", "alive", "harp", "sharp", "armstrong"] <br>
+                    a3 = ['live', 'strong', 1, 'lyal', 'lysh', 'arp'] <br> <br>
+
+                    function inArray(array1, array2) { <br>
+                    newArr = [] <br>
+                    array2=array2.filter(e => typeof e === 'string') <br>
+                    for (let i = 0; i < array1.length; i++) { let el=array1[i]; array2.forEach(e=> { <br>
+                      if (e.search(el) !== -1) { <br>
+                      newArr.push(el) <br>
+                      } <br>
+                      }) <br>
+                      } <br>
+                      newArr = newArr.sort((a, b) => a > b ? 1 : -1) <br>
+                      .filter((value, index) => newArr.indexOf(value) === index) <br> <br>
+
+                      console.log(array1, array2) <br>
+                      console.log(newArr); <br>
+                      return newArr <br>
+                      } <br> <br>
+
+                      inArray(a1, a2) <br>
+                      inArray(a1, a3) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////29/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-29">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-29"
+            aria-expanded="true" aria-controls="text-29" onclick=buttonTxt(event)>
+            29. Strange Mathematics
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-29" class="accordion-collapse collapse" aria-labelledby="title-29"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            In a certain kingdom, strange mathematics is taught at school. <br>
+            Its main difference from ordinary mathematics is that the numbers in it are not ordered in ascending order,
+            but lexicographically, as in a dictionary (first by the first digit, then, if the first digit is equal, by
+            the second, and so on). <br>
+            In addition, we do not consider an infinite set of natural numbers, but only the first n numbers. <br>
+            <code class="text-info">
+              So, for example, if n = 11, then the numbers in strange mathematics are ordered as follows: <br>
+              1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9. <br> <br>
+            </code>
+
+            Help your students to learn this science. <br>
+            Write a function that receives two integer numbers: <br>
+            n (total amount of numbers in strange mathematics) and <br>
+            k (number from sequence) and returns the location of a given number k in the order defined in strange
+            mathematics. <br>
+            For example, if n = 11 and k = 2, the function should return 4 as the answer. <br>
+            Input: 1 <= n <=100 000 , 1 <=k <=n. <br>
+              Output: position of the number k in sequence of the first n natural numbers in lexicographic order. <br>
+              Numbering starts with 1. <br><br>
+              Examples: <br>
+              <code class="text-info">
+                strangeMath(11, 2)===4 <br>
+                strangeMath(15, 5)===11 <br>
+                strangeMath(15, 15)===7 <br>
+              </code>
+
+              <div class="accordion mt-5 d-flex flex-column" id="solution-29">
+                <button class="btn btn-outline-warning align-self-end collapsed" id="button-29" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#s-text-29" aria-expanded="true" aria-controls="s-text-29"
+                  onclick='changeBtnText("button-29")'>
+                  Show Solution
+                </button>
+                <div id="s-text-29" class="accordion-collapse collapse solution" aria-labelledby="button-29"
+                  data-bs-parent="#solution-29">
+                  <div class="mt-4 pb-5">
+                    <hr>
+                    <code class="text-secondary">
+                      function strangeMath(n, k) { <br>
+                      newArr = [] <br>
+                      for (let i = 0; i < n; i++) { newArr.push((i+1).toString()) } <br>
+                        newArr=newArr.sort().map(n=>parseInt(n,10)) <br> <br>
+
+                        console.log(newArr, k); <br>
+                        console.log(newArr.indexOf(k)+1); <br>
+                        return newArr.indexOf(k) + 1 <br>
+                        } <br> <br>
+
+                        strangeMath(11, 2) <br>
+                        strangeMath(15, 5) <br>
+                        strangeMath(15, 15) <br>
+                    </code>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////30/////////////////////////// -->
+      <div class="accordion-item 6kyu">
+        <h2 class="accordion-header" id="title-30">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-30"
+            aria-expanded="true" aria-controls="text-30" onclick=buttonTxt(event)>
+            30. Last Survivors Ep.2
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-30" class="accordion-collapse collapse" aria-labelledby="title-30"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Substitute two equal letters by the next letter of the alphabet (two letters convert to one): <br>
+            "aa" => "b", "bb" => "c", .. "zz" => "a". <br>
+            The equal letters do not have to be adjacent. <br>
+            Repeat this operation until there are no possible substitutions left. <br>
+            Return a string. <br> <br>
+
+            Example: <br>
+            <code class="text-info">
+              let str = "zzzab" <br>
+              str = "azab" <br>
+              str = "bzb" <br>
+              str = "cz" <br>
+              return "cz" <br> <br>
+            </code>
+            Notes: <br>
+            The order of letters in the result is not important. <br>
+            The letters "zz" transform into "a". <br>
+            There will only be lowercase letters. <br>
+            <div class="accordion mt-5 d-flex flex-column" id="solution-30">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-30" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-30" aria-expanded="true" aria-controls="s-text-30"
+                onclick='changeBtnText("button-30")'>
+                Show Solution
+              </button>
+              <div id="s-text-30" class="accordion-collapse collapse solution" aria-labelledby="button-30"
+                data-bs-parent="#solution-30">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function lastSurvivors(str) { <br>
+                    let index; <br>
+                    let letter; <br>
+                    let letterCode = 0; <br>
+                    let secondIndex; <br> <br>
+
+                    helper = () => { <br>
+                    strArr = str.split('') <br>
+                    for (let i = 0; i < strArr.length; i++) { <br>
+                      if (str.indexOf(strArr[i], str.indexOf(strArr[i]) + 1) !== -1) { <br>
+                      letter = strArr[i] <br>
+                      letterCode = strArr[i].charCodeAt() <br>
+                      if (letterCode === 122) letterCode = 96 <br>
+                      break <br>
+                      } <br>
+                      } <br> <br>
+
+                      if(letterCode !== 0){ <br>
+                      index = str.indexOf(letter); <br>
+                      secondIndex = str.indexOf(letter, str.indexOf(letter) + 1); <br>
+                      strArr.splice(secondIndex, 1) <br>
+                      strArr.splice(index, 1, String.fromCharCode(letterCode + 1)) <br>
+
+                      str = strArr.join('') <br>
+                      // console.log(str) <br>
+
+                      strArr = str.split('') <br>
+                      for (let i = 0; i < strArr.length; i++) { <br>
+                        if (str.indexOf(strArr[i], str.indexOf(strArr[i]) + 1) !== -1) { <br>
+                        helper() <br>
+                        } <br>
+                        }} <br>
+                        // console.log(letter, letterCode, index, secondIndex); <br>
+                        } <br>
+
+                        helper() <br>
+                        console.log(str) <br>
+                        return str <br>
+                        } <br><br>
+
+                        lastSurvivors("aaab") <br>
+                        lastSurvivors("zzzab") <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////31/////////////////////////// -->
+      <div class="accordion-item 8kyu">
+        <h2 class="accordion-header" id="title-31">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-31"
+            aria-expanded="true" aria-controls="text-31" onclick=buttonTxt(event)>
+            31. Hello, Name or World!
+            <span >
+              <img src="images/8kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-31" class="accordion-collapse collapse" aria-labelledby="title-31"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not
+            given (or passed as an empty String). <br>
+            Assuming that name is a String and it checks for user typos to return a name with a first capital letter
+            (Xxxx). <br> <br>
+
+            Examples: <br>
+            <code class="text-info">
+              hello "john" => "Hello, John!" <br>
+              hello "aliCE" => "Hello, Alice!" <br>
+              hello => "Hello, World!" # name not given <br>
+              hello "" => "Hello, World!" # name is an empty String <br>
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-31">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-31" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-31" aria-expanded="true" aria-controls="s-text-31"
+                onclick='changeBtnText("button-31")'>
+                Show Solution
+              </button>
+              <div id="s-text-31" class="accordion-collapse collapse solution" aria-labelledby="button-31"
+                data-bs-parent="#solution-31">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function hello(name) { <br>
+                    text = '' <br>
+                    if(name === '' || name === undefined) text = `Hello, World!` <br>
+                    else { <br>
+                    name = name.toLowerCase().split('') <br>
+                    name[0] = name[0].toUpperCase() <br>
+                    name = name.join('') <br>
+                    text = `Hello, ${name}!` <br>
+                    } <br>
+                    console.log(text); <br>
+                    return text <br>
+                    } <br> <br>
+
+                    hello('john') <br>
+                    hello('aliCE') <br>
+                    hello('') <br>
+                    hello() <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////32/////////////////////////// -->
+      <div class="accordion-item 6kyu">
+        <h2 class="accordion-header" id="title-32">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-32"
+            aria-expanded="true" aria-controls="text-32" onclick=buttonTxt(event)>
+            32. Character with longest consecutive repetition
+            <span >
+              <img src="images/6kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-32" class="accordion-collapse collapse" aria-labelledby="title-32"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            For a given string s find the character c (or C) with longest consecutive repetition <br>
+            and return: [c, l] <br>
+            where l (or L) is the length of the repetition. <br>
+            If there are two or more characters with the same l return the first in order of appearance. <br>
+            For empty string return: ["", 0] <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-32">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-32" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-32" aria-expanded="true" aria-controls="s-text-32"
+                onclick='changeBtnText("button-32")'>
+                Show Solution
+              </button>
+              <div id="s-text-32" class="accordion-collapse collapse solution" aria-labelledby="button-32"
+                data-bs-parent="#solution-32">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function longestRepetition(s) { <br>
+                    s = s.split('') <br>
+                    arr = [] <br> <br>
+
+                    for (let i = 0; i < s.length; i++) { <br>
+                      if (i === 0) arr.push(s[i]) <br>
+                      if (s[i] === s[i + 1] ) { <br>
+                      arr.push(s[i]) <br>
+                      } <br>
+                      else if (i === s.length-1) {} <br>
+                      else arr.push(' ', s[i+1]) <br>
+                      } <br> <br>
+
+                      arr = arr.join('').split(' ').sort((a, b) => b.length - a.length) <br>
+
+                      if (arr[0].length > 1) { <br>
+                      arr2 = [arr[0][0], arr[0].length] <br>
+                      } else arr2 = [arr[0], arr[0].length]; <br>
+
+                      console.log(arr2); <br>
+                      return arr2 <br>
+                      } <br> <br>
+
+                      longestRepetition("bbbaaabaaaa") <br>
+                      longestRepetition("cbdeuuu900") <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////33/////////////////////////// -->
+      <div class="accordion-item 5kyu">
+        <h2 class="accordion-header" id="title-33">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-33"
+            aria-expanded="true" aria-controls="text-33" onclick=buttonTxt(event)>
+            33. ISBN-10 Validation
+            <span >
+              <img src="images/5kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-33" class="accordion-collapse collapse" aria-labelledby="title-33"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            ISBN-10 identifiers are ten digits long. <br>
+            The first nine characters are digits 0-9. <br>
+            The last digit can be 0-9 or X, to indicate a value of 10. <br>
+            An ISBN-10 number is valid if the sum of the digits multiplied by their position modulo 11 equals zero. <br>
+            <br>
+            For example: <br>
+            <code class="text-info">
+              ISBN : 1 1 1 2 2 2 3 3 3 9 <br>
+              position : 1 2 3 4 5 6 7 8 9 10 <br>
+              This is a valid ISBN, because: <br>
+              (1*1 + 1*2 + 1*3 + 2*4 + 2*5 + 2*6 + 3*7 + 3*8 + 3*9 + 9*10) % 11 = 0 <br> <br>
+            </code>
+
+            Examples: <br>
+            <code class="text-info">
+              1112223339 --> true <br>
+              111222333 --> false <br>
+              1112223339X --> false <br>
+              1234554321 --> true <br>
+              1234512345 --> false <br>
+              048665088X --> true <br>
+              X123456788 --> false <br>
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-33">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-33" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-33" aria-expanded="true" aria-controls="s-text-33"
+                onclick='changeBtnText("button-33")'>
+                Show Solution
+              </button>
+              <div id="s-text-33" class="accordion-collapse collapse solution" aria-labelledby="button-33"
+                data-bs-parent="#solution-33">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function validISBN10(isbn) { <br>
+
+                    if (isbn.length === 10){ <br>
+                    isbn = isbn.split('') <br>
+                    sum = 0 <br>
+                    if (isbn[9] === 'X') { <br>
+                    isbn[9] = '10' <br>
+                    } <br>
+                    isbn = isbn.map((el, i, arr) => { <br>
+
+                    if ( !isNaN(parseInt(el, 10))) { <br>
+                    return parseInt(el, 10) <br>
+                    } else { <br>
+                    return -100000 <br>
+                    } <br>
+
+                    }) <br>
+
+                    isbn.forEach((el, i) => sum += el * (i+1)) <br>
+                    if (sum > 0 && sum%11 === 0) { <br>
+                    console.log(true); <br>
+                    return true <br>
+                    } else { <br>
+                    console.log(false); <br>
+                    return false <br>
+                    } <br>
+
+                    } else { <br>
+                    console.log(false); <br>
+                    return false <br>
+                    } <br>
+                    console.log(isbn); <br>
+                    } <br> <br>
+
+                    validISBN10('048665088X') <br>
+                    validISBN10('1112223339X') <br>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////34/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-34">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-34"
+            aria-expanded="true" aria-controls="text-34" onclick=buttonTxt(event)>
+            34. 16+18=214
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-34" class="accordion-collapse collapse" aria-labelledby="title-34"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            For this kata you will have to forget how to add two numbers. <br>
+            It can be best explained using the following meme: <br>
+            <div style="height: 12rem; display: flex; justify-content: center;">
+              <img src="images/16+18=214.png" style="height: 100%;">
+            </div> <br>
+            Dayane Rivas adding up a sum while competing in the Guatemalan television show "Combate" in May 2016 <br>
+            In simple terms, our method does not like the principle of carrying over numbers and just writes down every
+            number it calculates :-) <br>
+            You may assume both integers are positive integers. <br>
+
+            Examples: <br>
+            <code class="text-info">
+              16 + 18 = 214 // 2 14 <br>
+              26 + 39 = 515 // 5 15 <br>
+              122 + 81 = 1103 // 1 10 3 <br>
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-34">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-34" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-34" aria-expanded="true" aria-controls="s-text-34"
+                onclick='changeBtnText("button-34")'>
+                Show Solution
+              </button>
+              <div id="s-text-34" class="accordion-collapse collapse solution" aria-labelledby="button-34"
+                data-bs-parent="#solution-34">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function add(num1, num2) { <br>
+                    c = '' <br> <br>
+
+                    num1 = num1.toString().split('').map(el => parseInt(el, 10)).reverse() <br>
+                    num2 = num2.toString().split('').map(el => parseInt(el, 10)).reverse() <br> <br>
+
+                    if (num1.length >= num2.length) { <br>
+                    for (let i = 0; i < num2.length; i++) { <br>
+                      c = `${(num1[i]+num2[i]).toString()}${c}` <br>
+                      } <br>
+                      num1 = num1.slice(num2.length).join('').toString() <br>
+                      console.log(parseInt(`${num1}${c}`, 10)) <br>
+                      return parseInt(`${num1}${c}`, 10) <br> <br>
+
+                      } else { <br>
+                      for (let i = 0; i < num1.length; i++) { <br>
+                        c = `${(num1[i]+num2[i]).toString()}${c}` <br>
+                        } <br>
+                        num2 = num2.slice(num1.length).join('').toString() <br>
+                        console.log(parseInt(`${num2}${c}`, 10)); <br>
+                        return parseInt(`${num2}${c}`, 10) <br>
+                        } <br>
+                        } <br> <br>
+
+                        add(16, 18) <br>
+                        add(122, 81) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////35/////////////////////////// -->
+      <div class="accordion-item 7kyu">
+        <h2 class="accordion-header" id="title-35">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-35"
+            aria-expanded="true" aria-controls="text-35" onclick=buttonTxt(event)>
+            35. Sorted? Yes? No? How?
+            <span >
+              <img src="images/7kyu.jpg" alt="">
+            </span>
+          </button>
+        </h2>
+        <div id="text-35" class="accordion-collapse collapse" aria-labelledby="title-35"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Complete the method which accepts an array of integers, and returns one of the following: <br>
+            "yes, ascending" - if the numbers in the array are sorted in an ascending order <br>
+            "yes, descending" - if the numbers in the array are sorted in a descending order <br>
+            "no" - otherwise <br>
+            You can assume the array will always be valid, and there will always be one correct answer. <br>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-35">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-35" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-35" aria-expanded="true" aria-controls="s-text-35"
+                onclick='changeBtnText("button-35")'>
+                Show Solution
+              </button>
+              <div id="s-text-35" class="accordion-collapse collapse solution" aria-labelledby="button-35"
+                data-bs-parent="#solution-35">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function isSortedAndHow(array) { <br> <br>
+
+                      let arr1 = [].concat(array).sort((a,b)=> a-b).join() <br>
+                      let arr2 = [].concat(array).sort((a,b)=> b-a).join() <br>
+                      array = array.join()  <br> <br>
+                    
+                      if (array === arr1) { <br>
+                        console.log('yes, ascending'); <br>
+                        return 'yes, ascending' <br>
+                      } else if (array === arr2) { <br>
+                        console.log('yes, descending'); <br>
+                        return 'yes, descending' <br>
+                      } else { <br>
+                        console.log('no'); <br>
+                        return 'no' <br>
+                      } <br>
+                    
+                    } <br> <br>
+                    
+                    isSortedAndHow([1, 4, 30]) <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ///////////////////////////36/////////////////////////// -->
+      <!-- <div class="accordion-item">
+        <h2 class="accordion-header" id="title-36">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-36"
+            aria-expanded="true" aria-controls="text-36" onclick=buttonTxt(event)>
+            36. Hello, Name or World!
+          </button>
+        </h2>
+        <div id="text-36" class="accordion-collapse collapse" aria-labelledby="title-36"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not
+            given (or passed as an empty String). <br>
+            Assuming that name is a String and it checks for user typos to return a name with a first capital letter
+            (Xxxx). <br> <br>
+
+            Examples: <br>
+            <code class="text-info">
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-36">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-36" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-36" aria-expanded="true" aria-controls="s-text-36"
+                onclick='changeBtnText("button-36")'>
+                Show Solution
+              </button>
+              <div id="s-text-36" class="accordion-collapse collapse solution" aria-labelledby="button-36"
+                data-bs-parent="#solution-36">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function hello(name) { <br>
+                    text = '' <br>
+                    if(name === '' || name === undefined) text = `Hello, World!` <br>
+                    else { <br>
+                    name = name.toLowerCase().split('') <br>
+                    name[0] = name[0].toUpperCase() <br>
+                    name = name.join('') <br>
+                    text = `Hello, ${name}!` <br>
+                    } <br>
+                    console.log(text); <br>
+                    return text <br>
+                    } <br> <br>
+
+                    hello('john') <br>
+                    hello('aliCE') <br>
+                    hello('') <br>
+                    hello() <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- ///////////////////////////37/////////////////////////// -->
+      <!-- <div class="accordion-item">
+        <h2 class="accordion-header" id="title-37">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-37"
+            aria-expanded="true" aria-controls="text-37" onclick=buttonTxt(event)>
+            37. Hello, Name or World!
+          </button>
+        </h2>
+        <div id="text-37" class="accordion-collapse collapse" aria-labelledby="title-37"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not
+            given (or passed as an empty String). <br>
+            Assuming that name is a String and it checks for user typos to return a name with a first capital letter
+            (Xxxx). <br> <br>
+
+            Examples: <br>
+            <code class="text-info">
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-37">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-37" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-37" aria-expanded="true" aria-controls="s-text-37"
+                onclick='changeBtnText("button-37")'>
+                Show Solution
+              </button>
+              <div id="s-text-37" class="accordion-collapse collapse solution" aria-labelledby="button-31"
+                data-bs-parent="#solution-37">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function hello(name) { <br>
+                    text = '' <br>
+                    if(name === '' || name === undefined) text = `Hello, World!` <br>
+                    else { <br>
+                    name = name.toLowerCase().split('') <br>
+                    name[0] = name[0].toUpperCase() <br>
+                    name = name.join('') <br>
+                    text = `Hello, ${name}!` <br>
+                    } <br>
+                    console.log(text); <br>
+                    return text <br>
+                    } <br> <br>
+
+                    hello('john') <br>
+                    hello('aliCE') <br>
+                    hello('') <br>
+                    hello() <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- ///////////////////////////38/////////////////////////// -->
+      <!-- <div class="accordion-item">
+        <h2 class="accordion-header" id="title-38">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#text-38"
+            aria-expanded="true" aria-controls="text-38" onclick=buttonTxt(event)>
+            38. Hello, Name or World!
+          </button>
+        </h2>
+        <div id="text-38" class="accordion-collapse collapse" aria-labelledby="title-38"
+          data-bs-parent="#codingChallenges">
+          <div class="accordion-body">
+            Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not
+            given (or passed as an empty String). <br>
+            Assuming that name is a String and it checks for user typos to return a name with a first capital letter
+            (Xxxx). <br> <br>
+
+            Examples: <br>
+            <code class="text-info">
+            </code>
+
+            <div class="accordion mt-5 d-flex flex-column" id="solution-38">
+              <button class="btn btn-outline-warning align-self-end collapsed" id="button-38" type="button"
+                data-bs-toggle="collapse" data-bs-target="#s-text-38" aria-expanded="true" aria-controls="s-text-38"
+                onclick='changeBtnText("button-38")'>
+                Show Solution
+              </button>
+              <div id="s-text-38" class="accordion-collapse collapse solution" aria-labelledby="button-38"
+                data-bs-parent="#solution-38">
+                <div class="mt-4 pb-5">
+                  <hr>
+                  <code class="text-secondary">
+                    function hello(name) { <br>
+                    text = '' <br>
+                    if(name === '' || name === undefined) text = `Hello, World!` <br>
+                    else { <br>
+                    name = name.toLowerCase().split('') <br>
+                    name[0] = name[0].toUpperCase() <br>
+                    name = name.join('') <br>
+                    text = `Hello, ${name}!` <br>
+                    } <br>
+                    console.log(text); <br>
+                    return text <br>
+                    } <br> <br>
+
+                    hello('john') <br>
+                    hello('aliCE') <br>
+                    hello('') <br>
+                    hello() <br>
+                  </code>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
 
     </div>
 
