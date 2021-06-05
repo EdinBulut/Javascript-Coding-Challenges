@@ -38,11 +38,9 @@ function filterKyu(e) {
 
   
   for (let i = 0; i < filterBtns.length; i++) {
-    filterBtns[i].style.background = '#333'
-    filterBtns[i].style.color = '#ccc'
+    filterBtns[i].classList.remove('kyu')
   }
-  e.target.style.background = 'rgb(236, 182, 19)'
-  e.target.style.color = '#333'
+  e.target.classList.add('kyu')
   
   for (let i = 0; i < tasks.length; i++) {
     let text = tasks[i].children[0].children[0].innerHTML.trim().split(' ')
@@ -64,3 +62,24 @@ function filterKyu(e) {
 
 }
 /////////////////////////////////////////////////////////
+// function generateHashtag (str) {
+//   hashtag = []
+//   str = str.trim()
+//   if (str.length === 0) return false
+//   if (str.length > 1) {
+//   str = str.trim().split(' ')
+//   str = str.filter(s => s !== '')
+  
+//   for (s of str ) {
+//   s = s.split('')
+//   s[0] = s[0].toUpperCase()
+//   s = s.join('')
+//   hashtag.push(s)
+//   }
+//   hashtag = `#${hashtag.join('')}`
+//   }
+//   return (hashtag.length > 140)? false : hashtag
+//   }
+  
+//   console.log(generateHashtag(" Hello there thanks for trying my Kata"))
+//   console.log(generateHashtag(" Hello World "))

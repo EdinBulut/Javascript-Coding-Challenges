@@ -174,8 +174,10 @@ h1 {
   color: #333
 }
 
-
-
+.btns .hex .kyu {
+  background:rgb(236, 182, 19); 
+  color: #333 ;
+}
 
 @media (max-width: 768px) {
   h3 a img {
